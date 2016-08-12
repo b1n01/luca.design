@@ -1,0 +1,4 @@
+Per far funzionare il mousehover sul nav con javascript le icone del menu si devono chiamare esattamente così:
+
+La versione chiara: nome.formato
+La versione scura:  nome.Dark.formato

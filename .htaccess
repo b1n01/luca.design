@@ -1,0 +1,37 @@
+#Erroe 404 page not found
+ErrorDocument 404 /404.html
+
+#Default charset
+AddDefaultCharset UTF-8
+
+# BEGIN Compressione MOD_Deflate
+	SetOutputFilter DEFLATE
+	AddOutputFilter DEFLATE text/plain
+	AddOutputFilter DEFLATE text/xml
+	AddOutputFilter DEFLATE application/xhtml+xml
+	AddOutputFilter DEFLATE text/css
+	AddOutputFilter DEFLATE application/xml
+	AddOutputFilter DEFLATE image/svg+xml
+	AddOutputFilter DEFLATE application/rss+xml
+	AddOutputFilter DEFLATE application/atom_xml
+	AddOutputFilter DEFLATE application/x-javascript
+	AddOutputFilter DEFLATE application/x-httpd-php
+	AddOutputFilter DEFLATE application/x-httpd-fastphp
+	AddOutputFilter DEFLATE application/x-httpd-eruby
+	AddOutputFilter DEFLATE text/html
+	SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.pdf$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.avi$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.mov$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.mp3$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.mp4$ no-gzip dont-vary
+	SetEnvIfNoCase Request_URI \.rm$ no-gzip dont-vary
+	BrowserMatch ^Mozilla/4 gzip-only-text/html
+	BrowserMatch ^Mozilla/4\.0[678] no-gzip
+	BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+# End Compressione MOD_Deflate
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]

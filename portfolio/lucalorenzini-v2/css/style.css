@@ -1,0 +1,266 @@
+/*
+Luca Lorenzini
+12/2013
+style.css for simple_colour(blue) personal page
+*/
+
+/*-----  GENERIC -----*/
+html{
+	height: 100%;
+}
+body{
+	font-family: 'Average Sans', sans-serif;
+	font-size: 16px;
+	color: #2A2C2B;
+	margin: 0;
+	height: 100%;
+}
+#noScript{
+	margin: auto 0;
+	padding: 0;
+	width: 100%;
+	background: #B20000;
+	text-align: center;
+	color: #FFF;
+	overflow: hidden;
+	position: fixed;
+	z-index: 100;
+}
+#noScript p{
+	margin: 10px;
+	padding: 0;
+}
+a{
+	color: #DEDEDE;
+	text-decoration: none;
+}
+a:hover,  a:active{
+	border-bottom: dotted 1px #DEDEDE;
+}
+.colored{
+	color: #333399;
+}
+
+/*----- HEADER -----*/
+#header{
+	height: 100%;
+}
+#logo{
+	overflow: hidden;
+	height: 100%;
+	background-color: #3077B2;
+	background-image: url('../img/pattern/gray.png');
+}
+#logo #img_logo{
+	position: absolute;
+	top: -68px; left: 0; right: 0; bottom: 0;/*68px of the nav*/
+	margin: auto;
+	width: auto;
+	/*max-width: 652px;*/
+	max-width: 500px;
+	height: auto;
+	/*max-height: 566px;*/
+	max-height: 435;
+}
+#logo a:hover,  #logo a:active{
+	border-bottom: none;
+}
+#logo #scroll_down{
+	width: 40px;
+	height: 40px;
+  	position: absolute; 
+  	bottom: 80px; 
+  	right: 20px;
+}
+#header nav{
+	overflow: hidden;
+	background-color: #3077B2;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+	position: relative;
+	top: -68px;
+	width: 100%;
+	z-index: 50;
+	border-top: solid 1px #DCDCDC;
+	background-image: url('../img/pattern/gray.png');
+}
+#header li{
+	display: inline-block;
+	margin: 0 12px;
+}
+#header ul{
+	padding-left: 0;
+	width: 420px;
+	margin: 21px auto;
+}
+nav #scroll_up{
+	width: 40px;
+	height: 40px;
+  	position: absolute; 
+  	right: 20px;
+  	top: 14px;
+  	display: none;
+}
+
+/*----- CONTENT -----*/
+#content{
+	overflow: hidden;
+}
+.title{
+	margin: 108px 0 40px 0;/*88 = 68 of the nav + 20*/
+}
+.title p{
+	width: auto;
+	font-size: 48px;
+	font-family: 'Varela Round', sans-serif;
+	margin: 0 40px 0 40px;
+	color: #3077B2;
+	text-transform: uppercase;
+	border-bottom: 2px dotted #3077B2;
+}
+
+/*----- WORKS -----*/
+#works{
+	overflow: hidden;
+	position: relative;
+	z-index: 10;
+	background-color: #DCDCDC;
+}
+#works_content{
+	overflow: hidden;
+	margin: 0;
+}
+.works_item{
+	width: 300px;
+	height: 200px;
+	margin: 15px;
+	padding: 0;
+	float: left;
+	-webkit-box-shadow: 0 0 5px #333;
+	   -moz-box-shadow: 0 0 5px #333;
+    		box-shadow: 0 0 5px #333;
+	position: relative;
+}
+.works_item_description{
+	width: 260px;
+	height: 50px;
+	bottom: 10px;
+	left: 0px;
+	margin-right: solid 2px #999;
+	padding: 0;
+	text-align: left;
+	font-size: 14px;
+	background-color: #202020;
+	color: #EEE;
+	display: none;
+	position: absolute;
+}
+.works_item_description p{
+	margin: 5px;
+}
+.works_item_img a{
+	margin: 0;
+	position: absolute;
+	border-bottom: none;
+}
+.works_item_img img{
+	z-index: -10;
+	position: relative;
+	opacity: 1;
+}
+
+/*----- INFORMATIONS -----*/
+#informations{
+	overflow: hidden;
+	background-color: #DCDCDC;
+}
+#informations_content{
+	margin: 80px;
+	font-size: 18px;
+	overflow: hidden;
+	padding: 30px;
+}
+#story{
+	width: 70%;	
+	margin: auto;
+	text-align: justify;
+}
+#story img{
+	display: block;
+    margin: 20px auto;
+    border-radius: 18px;
+    -webkit-box-shadow:  0 0 10px #666;
+       -moz-box-shadow:  0 0 10px #666;
+       		box-shadow:  0 0 10px #666;
+}
+#knowledge{
+	width: 70%;
+	margin: auto;
+}
+#knowledge ul{
+	padding: 0;
+}
+#knowledge li{
+	display: inline-block;
+}
+
+/*----- CONTACTS -----*/
+#contacts{
+	background-color: #3077B2;
+	background-image: url('../img/pattern/gray.png');
+	border-top: 1px solid #EFEFEF;
+	font-size: 16px;
+	overflow: hidden;
+	color: #FFF;
+}
+#contact_title{
+	margin: 108px 0 40px 0;/*88 = 68 of the nav + 20*/
+}
+#contact_title p{
+	font-size: 48px;
+	font-family: 'Varela Round', sans-serif;
+	margin: 0 40px 0 40px;
+	text-transform: uppercase;
+	color: #DCDCDC;
+	border-bottom: 2px dotted #DCDCDC;
+}
+#contacts_container{
+	margin: 80px;
+}
+#contacts_container img{
+	float: left;
+	height: 120px;
+	width: auto;
+	margin: 0 80px;
+}
+#contacts_content ul{
+	margin: 0;
+}
+#contacts_content li{
+	margin: 10px;
+}
+#contacts_content img{
+	display: none;
+}
+
+
+/*---------- FOOTER: ----------*/
+#footer{
+	width: 100%;
+	background-color: #333;
+	color: #222;
+}
+/*---------- Media Query ----------*/
+@media only screen and (max-width: 800px){
+#story{
+	width: 90%;	
+}
+#knowledge{
+	width: 90%;
+}
+#informations_content{
+	margin: 80px 20px;
+	text-align: justify;
+}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Thumbnails Grid",
+  "version": "0.0.0",
+  "description": "thumbnails grid only css w/polymer",
+  "main": "thumbnail.html",
+  "keywords": [
+    "thumbnails",
+    "grid",
+    "css",
+    "polymer"
+  ],
+  "authors": [
+    "Luca Lorenzini https://github.com/chielorenz"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "core-ajax": "Polymer/core-ajax#~0.3.4"
+  }
+}

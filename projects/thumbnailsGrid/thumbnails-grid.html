@@ -1,0 +1,23 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="thumb-nail.html">
+<link rel="import" href="nails-services.html">
+
+<polymer-element name="thumbnails-grid">
+	<template>
+	  <nails-services nails="{{nails}}"></nails-services>
+		<template repeat="{{nail in nails}}">
+			<thumb-nail>
+				<a href="http://www.google.com" title="google">
+					<img src="{{nail.img}}" alt="thumbnail">
+				</a>
+				<h3 id="h3Title">
+					<a href="http://www.google.com" title="google">{{nail.title}} <span style="font-size: 16px; font-weight: 400">  &#x21b4; </span></a>
+				</h3>
+				<p>{{nail.description}}</p>
+			</thumb-nail>
+		</template>
+	</template>
+	<script>
+		Polymer({});
+	</script>
+</polymer-element>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="it"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pagina non trovata - Luca Lorenzini Web Designer</title>
+    <meta name="description" content="Pagina no trovata.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- NOTE: -->
+    <!-- Questa pagina viene 'montata' da .htaccess nella cartella puntata da l'url, -->
+    <!-- Quindi uso link assoluti per trovare sempre css e immagini.-->
+
+    <!-- css -->
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/normalize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+      /*additional style*/
+      #notFound{
+        text-align: center;
+        font-size: 0.9em;
+      }
+      #notFound ul{
+        display: inline-block;
+      }      
+    </style>
+  </head>
+  <body>
+  
+    <!--[if lt IE 7]>
+    <div class="browsehappy">
+      <p>Stai utilizzando un browser obsoleto. <a href="http://browsehappy.com/">Aggiorna</a> il tuo browser per una migliore esperienza.</p>
+    </div>
+    <![endif]-->
+    <div id="wrapper">
+      <header class="dynamic clearFix">
+        <a href="/index.html" title="home page">
+          <img src="/img/logoHorizontal.png" alt="logo">
+          <h1 id="nameHeader">Luca Lorenzini</h1>
+          <h1 id="jobHeader"> - Web Designer</h1>
+        </a>
+        <ul>
+          <li><a href="/portfolio.html">portfolio</a></li>
+          <li><a class="selected" href="/about.html">about</a></li>
+          <li><a href="/contact.html">contact</a></li>
+        </ul>
+      </header>
+
+      <div id="notFound" class="content">
+        <h1>Pagina non trovata &spades;</h1>
+        <p>Mi dispiace ma la pagina che stai cercando non esiste.</p>
+        <p>Il problema potrebbe essere:</p>
+        <ul>
+          <li>un indirizzo scritto non correttamente</li>
+          <li>un link non più utilizzato (out-of-date)</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

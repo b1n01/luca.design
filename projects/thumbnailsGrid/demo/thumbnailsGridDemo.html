@@ -1,0 +1,161 @@
+<!--
+Thumbnails grid: all css thumbails preview.
+
+https://github.com/chielorenz/thumbnailsGrid.git
+
+This is a demo file.
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ThumbnailGrid demo</title>
+
+
+    <!-- Google WebStart kit css -->
+    <link rel="stylesheet" href="h5bp.css">
+
+    <!-- font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- import the platform.js -->
+    <script src="../bower_components/platform/platform.js"></script>
+
+    <!-- IMPORTANT: import the thumbnails grid -->
+    <link rel="import" href="../thumbnails-grid.html">
+
+    <style>
+      html{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #66AAAA;
+        background-image: url('img/gray.png');
+        color: #EFEFEF;
+      }
+      #header{
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .wrapper{
+        width: 840px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      a:link{
+        font-size: 18px;
+        color: #EFEFEF;
+        text-decoration: none;
+        border-bottom: 1px dotted #EFEFEF;
+      }
+      a:hover{
+        border-bottom: 1px solid #EFEFEF;
+      }
+      a:visited, a:active{
+        color: #EFEFEF;
+      }
+      #header a:link{
+        margin: 10px;
+        padding: 5px;
+      }
+      hr{
+        border: 0;
+        border-bottom: 1px dotted #EFEFEF;
+        background-color: transparent;
+      }
+      #download a:link{
+        float: left;
+        width: 40%;
+        margin: 50px 5%;
+        padding: 8px 0; 
+        background-color: #EFEFEF;
+        text-align: center;
+        color: #66AAAA;
+        border-bottom: 0;
+     }
+     #download a:active,
+     #download a:visited{
+        color: #66AAAA;
+     }
+     #download a:hover{
+        color: #66AAAA;
+        transition: box-shadow 0.1s;
+        -webkit-box-shadow: 0 0 15px #EFEFEF;
+           -moz-box-shadow: 0 0 15px #EFEFEF;
+                box-shadow: 0 0 15px #EFEFEF;    
+      }
+      @media only screen and (max-width: 840px){
+        .wrapper{
+          width: 560px;
+        }
+      }
+      @media only screen and (max-width: 590px){
+        .wrapper{
+          width: 310px;
+        }
+        #header a:link{
+          margin: 0 !important;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="header">
+      <p>
+        <span style="font-size: 40px; font-weight: 700;">Thumbnails grid: </span>
+        <span style="font-size: 25px;"> all css thumbails preview</span> 
+      </p>
+      <p>
+        <a href="#demo" title="demo">demo</a> 
+        <a href="#about" title="about">about</a>
+        <a href="#works" title="how it works">how it works</a> 
+        <a href="#download" title="how it works">download</a> 
+      </p>
+    </div>
+    
+    <div class="wrapper" id="demo">
+      <thumbnails-grid></thumbnails-grid> 
+    </div>
+
+    <div class="wrapper" id="about">
+        <h2>About:</h2>
+        <hr>
+        <p>The aim of the Thumbnails Grid is to create a simple grid of thumbnails with an image (inside an ancor), a description and some cool css transition. The adaptive layout of the thumbnails is not the purpose of this project.</p>
+        <h4>Elements:</h4>
+        <p>It's build with <a href="http://www.polymer-project.org/" title="polymer-project">polymer</a> so is as simple as creating only one thumbnail and the magic of html5 element does the dirty job.</p>
+        <h4>Dependencies:</h4>
+        <p>I've used the package manager <a href="http://bower.io/" title="bower">bower</a> so ther sholud not be dependency problem, you just need a <blockquote>$bower install</blockquote> in the project's folder and you are ready to go.</p>
+    </div> 
+    <div class="wrapper" id="works">
+        <h2>How it works:</h2>
+        <hr>
+        <h4>Structure:</h4>
+        <p>There are three main files for this project:</p>
+        <ul>
+          <li><i>thumb-nail.html</i> is the thumbnail itself.</li>
+          <li><i>thumbnails-grid.html</i> is the grid element thath wrap all the thumbnails.</li>
+          <li><i>nails-services.html</i> is a fake-service which read a <i>.json</i> file where all the thumbnails are listed. Normally this will be a server response.</li>
+        </ul>
+        <h4>Workflow:</h4>
+        <p>The <i>thumbnailsGridDemo.html</i> file import <i>thumbnails-grid.html</i> which call the sevices and build all the thumbnails with the response.</p>
+    </div>
+
+    <div class="wrapper" id="download">
+        <h2>Download:</h2>
+        <hr>
+        <a  href="https://github.com/chielorenz/thumbnailsGrid.git" title="see on github">see on github</a>
+        <a href="https://github.com/chielorenz/thumbnailsGrid/archive/master.zip" title="download zip">download zip</a>
+    </div> 
+    
+  </body>
+</html>

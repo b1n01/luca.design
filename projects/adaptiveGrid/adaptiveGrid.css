@@ -1,0 +1,77 @@
+/*
+Adaptive grid: simple css adaptive grid layout.
+
+https://github.com/chielorenz/adaptiveGrid.git
+*/
+.adaptiveGrid{
+	overflow: hidden;
+}
+.adaptiveGrid .fill,
+.adaptiveGrid .half,
+.adaptiveGrid .oneThird,
+.adaptiveGrid .twoThird,
+.adaptiveGrid .oneQuarter,
+.adaptiveGrid .threeQuarter,
+.adaptiveGrid .oneFifth,
+.adaptiveGrid .fourFifth{
+	background-color: #CDCDCD;
+	border-radius: 5px;
+	margin: 10px 1% 10px 1%;
+	padding: 5px 2% 5px 2%;
+	float: left;
+	overflow: hidden;
+}
+.adaptiveGrid .fill{
+	width: 94%;
+}	
+.adaptiveGrid .half{
+	width: 44%;
+}
+.adaptiveGrid .oneThird{
+	width: 27.333%;
+}
+.adaptiveGrid .twoThird{
+	width: 60.666%;
+}
+.adaptiveGrid .oneQuarter{
+	width: 19%;
+}
+.adaptiveGrid .threeQuarter{
+	width: 69%;
+}
+.adaptiveGrid .oneFifth{
+	width: 14%;
+}
+.adaptiveGrid .fourFifth{
+	width: 74%;
+}
+.adaptiveGrid .empty{
+	visibility: hidden;
+}
+@media only screen and (max-width: 700px){
+	.adaptiveGrid .oneThird,
+	.adaptiveGrid .oneQuarter,
+	.adaptiveGrid .oneFifth{
+		width: 44%;
+	}
+	.adaptiveGrid .twoThird,
+	.adaptiveGrid .threeQuarter,
+	.adaptiveGrid .fourFifth{
+		width: 94%;
+	}
+		.adaptiveGrid .empty{
+		display: none;
+	}
+}
+@media only screen and (max-width: 550px){
+	.adaptiveGrid .fill,
+	.adaptiveGrid .half,
+	.adaptiveGrid .oneThird,
+	.adaptiveGrid .twoThird,
+	.adaptiveGrid .oneQuarter,
+	.adaptiveGrid .threeQuarter,
+	.adaptiveGrid .oneFifth,
+	.adaptiveGrid .fourFifth{
+		width: 94% !important;
+	}
+}

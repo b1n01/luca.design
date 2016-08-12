@@ -1,0 +1,23 @@
+/*CSS mouse hover parallax */
+
+#parallax1{
+	background: url('demo/img/paint1.jpg') no-repeat center  center ;
+	background-size: calc(100% + 50px);
+	width: 750px;
+	height: 600px;
+	z-index: 1;
+}
+#parallax2{
+	background: url('demo/img/paint2.png') no-repeat center  center;
+	background-size: calc(100% + 50px);
+	width: 750px;
+	height: 600px;
+	z-index: 2;
+}
+#parallax3{
+	background: url('demo/img/paint3.png') no-repeat center  center;
+	background-size: calc(100% + 50px);
+	width: 750px;
+	height: 600px;
+	z-index: 3;
+}

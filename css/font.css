@@ -1,0 +1,22 @@
+/*--- Simplifica ---*/
+@font-face {
+  font-family: 'Simplifica';
+  src: url('../font/simplifica.eot'); /* IE9 Compat Modes */
+  src: url('../font/simplifica.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/simplifica.woff') format('woff'), /* Modern Browsers */
+       url('../font/simplifica.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
+
+/*--- font icons ---*/
+@font-face {
+  font-family: 'icomoon';
+  src:url('../font/icon/icomoon.eot?-6vmgxt');
+  src:url('../font/icon/icomoon.eot?#iefix-6vmgxt') format('embedded-opentype'),
+    url('../font/icon/icomoon.woff?-6vmgxt') format('woff'),
+    url('../font/icon/icomoon.ttf?-6vmgxt') format('truetype'),
+    url('../font/icon/icomoon.svg?-6vmgxt#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

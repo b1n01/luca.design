@@ -1,0 +1,134 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  height: 100%;
+  min-width: 320px;
+  min-height: 300px; }
+
+#box {
+  overflow: auto;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font: 16px "Ubuntu", sans-serif;
+  background-color: #294160; }
+
+#header-title {
+  display: inline-block;
+  font-size: 38px;
+  color: #e6eaef;
+  margin: 15px 10px; }
+
+.header-title-content, #header-title:before, #header-title:after {
+  transition: opacity 0.25s;
+  opacity: 0; }
+
+#header-title:before {
+  content: "{ "; }
+
+#header-title:after {
+  content: " }"; }
+
+#header-title:hover:before, #header-title:hover:after {
+  opacity: 1; }
+
+#inner-box {
+  animation: fadein 0.5s;
+  width: 75%;
+  max-width: 950px;
+  font-size: 1.2em; }
+  #inner-box #inner-box-header {
+    padding: 15px 0;
+    color: #e6eaef; }
+  #inner-box #inner-box-body {
+    border-radius: 5px;
+    color: #294160;
+    text-align: justify;
+    font: 600 14px "Open Sans", sans-serif;
+    background-color: #e6eaef;
+    padding: 25px; }
+
+.button {
+  opacity: 0.5;
+  font-size: 0.65em;
+  color: #e6eaef;
+  float: left;
+  margin: 15px 15px 15px 0;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer; }
+
+.button:hover {
+  opacity: 1; }
+
+.centered-v-h {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.scaleout {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 15px auto;
+  background-color: #e6eaef;
+  border-radius: 100%;
+  animation: scaleout .75s infinite ease-in-out; }
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    margin-top: 40px; } }
+
+@keyframes scaleout {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }

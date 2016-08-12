@@ -1,0 +1,22 @@
+/* 
+Template made by Luca Lorenzini 
+on 10/2013 
+for personal future work/learning 
+not ment to be use by others
+for information: chielorenz@gmail.com
+*/
+
+/* ---------- FONT ----------*/
+@font-face {
+  font-family: 'Average Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Average Sans'), url(../font/AverageSans.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round'), url(../font/VarelaRound.woff) format('woff');
+}

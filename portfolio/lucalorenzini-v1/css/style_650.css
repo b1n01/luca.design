@@ -1,0 +1,96 @@
+@media only screen and (max-width: 650px){
+/*-----  GENERIC -----*/
+body{
+	min-width: 300px;
+}
+ul{
+	margin: 5px;
+	padding: 0;
+	list-style: none;
+}
+a:hover,  a:active{
+	text-decoration: none;
+}
+
+
+/*----- HEADER -----*/
+#header{
+	width: 100%;
+	height: 160px;/*100 logo + 40 header + 20 margin*/
+	min-height: 160px;
+	position: static;
+}
+#logo{
+	width: 200px;
+	height: auto;
+	margin: 0 auto;
+}
+nav{
+	margin: 20px 0 0 0;
+}
+nav li{
+	float: left;
+	padding: 0;
+	text-align: center;
+	display: inline-block;
+	width: 33.333%; /*Cause theres three li*/
+	background-color: #EEE;
+	background-image: url('../img/pattern/gray.png');
+}
+nav li a{
+	opacity: 1;/*Because it is 0.6 from style_1000*/
+}
+.highlight{
+	font-size: 16px;
+}
+.hover{
+	font-size: 16px;
+	border-bottom: solid 2px #075687;
+}
+
+/*----- CONTENT -----*/
+#content{
+	width: 100%;
+	min-width: 300px;
+	margin: 0;
+}
+.to_top{
+	display: inline;
+}
+
+/*----- HOME -----*/
+#home{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+#home_text{
+	width: 300px;
+	margin-left: -150px;/* (300/2) */
+	font-size: 13px;
+	color: #333333;
+}
+#home_contact{
+	bottom: 0%;
+	margin-bottom: 0;
+}
+#home_contact_content{
+	width: auto;
+}
+
+/*----- WORKS -----*/
+#works{
+	margin-top: 60px;
+}
+
+/*----- INFORMATIONS -----*/
+#story{
+	width: auto;
+	margin: 5px;
+	float: none;
+}
+#knowledge{
+	width: auto;
+	margin: 5px;
+	float: none;
+}

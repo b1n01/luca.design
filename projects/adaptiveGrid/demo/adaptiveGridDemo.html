@@ -1,0 +1,209 @@
+<!--
+Adaptive grid: simple css adaptive grid layout.
+
+https://github.com/chielorenz/adaptiveGrid.git
+
+This file is a demo of the grid.
+-->
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Adaptive grid</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="196x196" href="images/touch/chrome-touch-icon-196x196.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- Google WebStart kit css -->
+    <link rel="stylesheet" href="h5bp.css">
+
+	<!-- add font from google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+
+
+
+	<!-- IMPORTANT: link the adaptivegrid's css -->
+	<link rel="stylesheet" type="text/css" href="../adaptiveGrid.css">
+
+
+
+	<!-- some style -->
+	<style type="text/css">
+		body{
+			color: #363636;
+			background-color: #EDEEF0;
+			background-image: url('img/gray.png');
+			font-family: 'Open Sans', sans-serif;
+		}
+		a{
+			color:#01678D;
+		}
+		a:hover,  a:active{
+			text-decoration: none;
+			margin: 0;
+			padding: 0;
+		}
+		.adaptiveGrid .shadow:hover{
+			-webkit-box-shadow: 0 0 8px #01678D;
+	   		   -moz-box-shadow: 0 0 8px #01678D;
+			        box-shadow: 0 0 8px #01678D;
+		}
+	</style>
+</head>
+<body>	
+	<div class="adaptiveGrid">
+		<div class="fill" style="background-color: transparent">
+			<h1>Adaptive Grid: <span style="color: #666666"> all css fluid grid layout demo.</span></h1>
+		</div>
+		<div class="fill" style="background-color: transparent">
+			<h4>You can match the classis to fill the space like so:</h4>
+		</div>
+	</div>
+	<div class="adaptiveGrid">
+		<div class="fill shadow"><p>.fill</p></div>
+
+		<div class="fourFifth shadow shadow"><p>.fourFifth</p></div>
+		<div class="oneFifth shadow shadow"><p>.oneFifth</p></div>
+
+		<div class="threeQuarter shadow shadow"><p>.threeQuarter</p></div>
+		<div class="oneQuarter shadow shadow"><p>.oneQuarter</p></div>
+
+		<div class="twoThird shadow shadow"><p>.twoThird</p></div>
+		<div class="oneThird shadow shadow"><p>.oneThird</p></div>
+
+		<div class="half shadow shadow"><p>.half</p></div>
+		<div class="half shadow shadow"><p>.half</p></div>
+
+		<div class="oneThird shadow shadow"><p>.oneThird</p></div>
+		<div class="twoThird shadow shadow"><p>.twoThird</p></div>
+
+		<div class="oneQuarter shadow shadow"><p>.oneQuarter</p></div>
+		<div class="threeQuarter shadow shadow"><p>.threeQuarter</p></div>
+
+		<div class="oneFifth shadow shadow"><p>.oneFifth</p></div>
+		<div class="fourFifth shadow shadow"><p>.fourFifth</p></div>
+	</div>
+
+	<div class="adaptiveGrid">
+		<div class="fill" style="background-color: transparent">
+			<h4>or use multiple istances of the same class:</h4>
+		</div>
+	</div>
+	<div class="adaptiveGrid">
+		<div class="half shadow"><p>.half</p></div>
+		<div class="half shadow"><p>.half</p></div>
+
+		<div class="oneThird shadow"><p>.oneThird</p></div>
+		<div class="oneThird shadow"><p>.oneThird</p></div>
+		<div class="oneThird shadow"><p>.oneThird</p></div>
+
+		<div class="oneQuarter shadow"><p>.oneQuarter</p></div>
+		<div class="oneQuarter shadow"><p>.oneQuarter</p></div>
+		<div class="oneQuarter shadow"><p>.oneQuarter</p></div>
+		<div class="oneQuarter shadow"><p>.oneQuarter</p></div>
+
+		<div class="oneFifth shadow"><p>.oneFifth</p></div>
+		<div class="oneFifth shadow"><p>.oneFifth</p></div>
+		<div class="oneFifth shadow"><p>.oneFifth</p></div>
+		<div class="oneFifth shadow"><p>.oneFifth</p></div>
+		<div class="oneFifth shadow"><p>.oneFifth</p></div>
+	</div>
+
+	<div class="adaptiveGrid">
+		<div class="fill" style="background-color: transparent">
+			<h4>or combine different classes:</h4>
+		</div>
+	</div>
+	<div class="adaptiveGrid">
+		<div class="oneQuarter shadow"><p>.oneQuarter</p></div>
+		<div class="half shadow"><p>.half</p></div>
+		<div class="oneQuarter shadow"><p>.oneQuarter</p></div>
+
+		<div class="twoThird shadow"><p>.twoThird</p></div>
+		<div class="oneThird shadow"><p>.oneThird</p></div>
+
+		<div class="oneThird shadow"><p>.oneThird</p></div>
+		<div class="oneQuarter shadow"><p>.oneQuarter</p></div>
+		<div class="oneThird shadow"><p>.oneThird</p></div>
+
+	</div>	
+
+	<div class="adaptiveGrid">
+		<div class="fill" style="background-color: transparent">
+			<h4>You can also add the <i>empty</i> class to a div to get the css <i>visibility : hidden</i> property effect.</h4>
+			<h5 style="color: #666666"><i>NOTE:</i> resize your screen (width < 700px ) to trigger media queries and see the <i>empty</i> class magically disappear.</h5>
+		</div>
+	</div>
+	<div class="adaptiveGrid">
+		<div class="oneQuarter shadow"><p>.oneQuarter</p></div>
+		<div class="half empty"></div>
+		<div class="oneQuarter shadow"><p>.oneQuarter</p></div>
+
+		<div class="oneThird empty shadow"><p><i>.oneThird .empty</i></p></div>
+		<div class="twoThird shadow"><p>.twoThird</p></div>
+		
+		<div class="oneThird shadow"><p>.oneThird</p></div>
+		<div class="oneFifth shadow"><p>.oneFifth</p></div>
+		<div class="oneThird empty"><p>.oneThird</p></div>
+
+		<div class="fourFifth shadow"><p>.fourFifth</p></div>
+		<div class="oneFifth empty"><p>.oneFifth</p></div>
+	</div>
+
+	<div class="adaptiveGrid">
+		<div class="fill" style="background-color: transparent">
+			<h4>It works even with encapsulation:</h4>
+		</div>
+	</div>
+	<div class="adaptiveGrid">
+		<div class="fill">
+			<div class="oneQuarter shadow" style="background-color: #BDBDBD" ><p>.oneQuarter</p></div>
+			<div class="half shadow" style="background-color: #BDBDBD" ><p>.half</p></div>
+			<div class="oneQuarter shadow" style="background-color: #BDBDBD" ><p>.oneQuarter</p></div>
+		</div>
+		<div class="half">
+			<div class="half" style="background-color: #BDBDBD">
+				<div class="half shadow" style="background-color: #ADADAD"><p>.half</p></div>
+				<div class="half shadow" style="background-color: #ADADAD"><p>.half</p></div>
+			</div>
+			<div class="half" style="background-color: #BDBDBD">
+				<div class="half shadow" style="background-color: #ADADAD"><p>.half</p></div>
+				<div class="half shadow" style="background-color: #ADADAD"><p>.half</p></div>
+			</div>
+		</div>
+		<div class="half">
+			<div class="fill" style="background-color: #BDBDBD">
+				<div class="half shadow" style="background-color: #ADADAD"><p>.half</p></div>
+				<div class="half shadow" style="background-color: #ADADAD"><p>.half</p></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="adaptiveGrid" style="margin-top:100px; text-align: center">
+		<div class="half">
+			<h4><h4>easy - fast - handy... Hope you enjoy!</h4></h4>
+		</div>
+		<div class="oneQuarter">
+			<h4>view on <a href="https://github.com/chielorenz/adaptiveGrid">github</a></h4>
+		</div>
+		<div class="oneQuarter">
+			<h4><a href="https://github.com/chielorenz/adaptiveGrid/archive/master.zip">download zip</a></h4>
+		</div>
+	</div>
+
+</body>
+</html>

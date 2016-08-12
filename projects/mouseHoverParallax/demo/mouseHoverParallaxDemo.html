@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>mouse multiple parallax</title>
+		<!-- jquery -->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<!-- font -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+
+
+		<!-- IMPORTANT: parallax script-->
+		<script type="text/javascript" src="../mouseHoverParallaxScript.js" ></script>
+
+		<!-- IMPORTANT: parallax css-->
+		<link rel="stylesheet" href="../mouseHoverParallaxStyle.css">
+
+
+
+		
+		<style>
+			/* other style for the demo page*/
+			html, body{
+				margin: 0;
+				padding: 0;
+				font-family: 'Open Sans', sans-serif;
+				color: #efefef;
+				font-size: 18px;
+				background: url('img/gray.png');
+				background-color: #346387;
+			}
+			a:link,
+			a:visited,
+			a:active{
+				display: inline-block;
+				color: #efefef;
+				text-decoration: none;
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+			}
+			a:hover{
+				border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+			}
+			header{
+				overflow: hidden;
+				text-align: center;
+			}
+			header h1{
+				margin: 40px 0 10px 0;
+			}
+			nav{
+				margin: 10px 0 40px 0;
+			}
+			nav a:link,
+			nav a:visited,
+			nav a:active{
+				display: inline-block;
+				color: #efefef;
+				text-decoration: none;
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+				margin: 8px;
+				padding: 5px;
+			}
+			nav a:hover{
+				border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+			}
+			.fill{
+				width: 70%;
+				min-width: 750px;
+				margin: 20px auto;
+				overflow: hidden;
+			}
+			.fill h2{
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+				margin: 20px 0;
+			}
+			.fill p{
+				margin: 25px 0; 
+			}
+			.wrapper{
+				width: 750px;
+				height: 600px;
+				margin: 40px auto;
+				-webkit-box-shadow: 0px 0px 30px 8px rgba(65, 65, 65, 0.5);
+				-moz-box-shadow:    0px 0px 30px 8px rgba(65, 65, 65, 0.5);
+				box-shadow:         0px 0px 30px 8px rgba(65, 65, 65, 0.5);
+			}
+			.coloredBg{
+				background-color: rgba(255, 255, 255, 0.15);
+				padding: 20px 0;
+			}
+			.code{
+				margin: 20px 0;
+				border: 1px solid #efefef;
+				background-color: #414141;
+				color: #efefef;
+				overflow: scroll;
+			}
+			.code p{
+				margin: 10px;
+			}
+			#download a{
+				width: 34%;
+				float: left;
+				margin: 20px 8%;
+			}
+			#download a:link,
+			#download a:active,
+			#download a:visited{
+				text-decoration: none;
+				background-color: #efefef;
+				color: #346387;
+				padding: 8px 0;
+				text-align: center;
+			}
+			#download a:hover{
+				-webkit-box-shadow: 0px 0px 30px 8px rgba(255, 255, 255, 0.2);
+				-moz-box-shadow:    0px 0px 30px 8px rgba(255, 255, 255, 0.2);
+				box-shadow:         0px 0px 30px 8px rgba(255, 255, 255, 0.2);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Parallax effect on mouse hover</h1>
+			<nav>
+				<a href="#demo" title="go to demo">demo</a>
+				<a href="#how" title="go to how it works">how it works</a>
+				<a href="#about" title="go to about">about</a>
+				<a href="#download" title="go to download">download</a>
+			</nav>
+		</header>
+		<div class="coloredBg">
+			<div id="demo" class="fill">
+				<h2>Demo:</h2>
+				<p>Hover the image (sorry no touch) to see the effect.</p>
+				<div class="wrapper">
+
+
+
+
+					<!-- IMPORTANT: parallax layers-->
+					<div id="parallax1">
+						<div id="parallax2">
+							<div id="parallax3">
+							</div>
+						</div> 
+					</div> 
+
+
+
+
+				</div>
+			</div>
+		</div>
+		<div id="how" class="fill">
+			<h2>How it works:</h2>
+			<p>The parallax effect is obtained with images stacked on top of each other. In this example there are three images: <a href="img/paint1.jpg" title="paitn1">bottom layer</a>, <a href="img/paint2.png" title="paitn1">mid layer</a>, <a href="img/paint3.png" title="paitn3">top layer</a> (the bottom one is blurred).</p>
+			<p>The trick is done with nested divs:</p>
+			<div class="code">
+<pre>
+  /*HTML code*/
+
+  &#60;div id="parallax1"&#62;
+    &#60;div id="parallax2"&#62;
+      &#60;div id="parallax3"&#62;
+      &#60;/div&#62;
+    &#60;/div&#62;
+  &#60;/div&#62;
+</pre>
+			</div>
+			<p>Each div has the <em>z-index</em> bigger than the parent and smaller than the child div (obviously the first div doesn't have a parent and the last doesn't have a child).</p>
+			<p>The background image size is 100% +  50px so there are 50px to move around the image.</p>
+			<div class="code">
+<pre>
+  /*CSS*/
+
+  #parallax1{
+    background: url('img/paint1.jpg') no-repeat center  center ;
+    background-size: calc(100% + 50px);
+    width: 750px;
+    height: 600px;
+    z-index: 1;
+  }
+
+  #parallax2{
+    background: url('img/paint2.png') no-repeat center  center ;
+    background-size: calc(100% + 50px);
+    width: 750px;
+    height: 600px;
+    z-index: 2;
+  }
+
+  #parallax3{
+    background: url('img/paint3.png') no-repeat center  center ;
+    background-size: calc(100% + 50px);
+    width: 750px;
+    height: 600px;
+    z-index: 3;
+  }
+</pre>
+			</div>
+			<p>To move the background image I use <em>mouseover</em> function to call <em>parallax(obj, e, factor)</em> which will calculate the new position of the background.</p>
+			<div class="code">
+<pre>
+  /*JavaScript code*/
+
+  $("#parallax1").mousemove(function(e){
+    parallax(this, e, 25);
+  });
+
+  $("#parallax2").mousemove(function(e){
+    parallax(this, e, 75);
+  });
+
+  $("#parallax3").mousemove(function(e){
+    parallax(this, e, 125);
+  });
+</pre>
+			</div>
+			<p>The main function is <em>parallax(obj, e, factor)</em> where <em>factor</em> is how much the pointer position will effect the position of the background image.</p>
+			<div class="code">
+<pre>
+  /*JavaScript code*/
+
+  function parallax(obj, e, factor){
+    var width = factor / $(obj).width();
+    var height = factor / $(obj).height();
+    var pageX = e.pageX - ($(window).width() / 2);
+    var pageY = e.pageY - ($(window).height() / 2) - $(window).scrollTop();
+    var newvalueX = width * pageX * -1 - 25;
+    var newvalueY = height * pageY * -1 - 25;
+    $(obj).css("background-position", newvalueX + "px " + newvalueY + "px");
+  }</pre>
+			</div>
+		</div>
+		<div id="about" class="fill">
+			<h2>About:</h2>
+			<p>This is just an example, don't use it as it is. However you can take inspiration, modify and distribute... it is published under the MIT license.</p>
+		</div>
+		<div id="download" class="fill">
+			<h2>Download:</h2>
+			<a href="https://github.com/chielorenz/mouseHoverParallax" title="project on gitjub">see on github</a>
+			<a href="https://github.com/chielorenz/mouseHoverParallax/archive/master.zip" title="download zip">download zip</a>	
+		</div>
+	</body>
+</html>
