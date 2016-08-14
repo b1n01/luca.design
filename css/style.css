@@ -270,6 +270,9 @@ footer a:hover{
 /*--- CONTACT PAGE ---*/
 #contact{
 	font-size: 0.9em;
+	margin: 71px auto 0;
+    width: 180px;
+    text-align: center;
 }
 #contact h1{
 	margin: 0;
@@ -285,7 +288,6 @@ footer a:hover{
 	margin: 3% 0;
 }
 #link a{
-	display: block;
 	border-bottom: 1px solid transparent;
 }
 #contact form{
@@ -383,9 +385,6 @@ footer a:hover{
 	}
 	#link{		
 		padding: 20px;
-		background-color: #f6f6f6;
-		border: 3px solid #fafafa;
-		border-radius: 5px;
 	}
 	#link ul{
 		margin: 30px 0 0 0;
@@ -466,9 +465,6 @@ footer a:hover{
 		margin-top: 0;
 	}
 	#contact #link{
-		margin-right: 5%;
-		width: 35%;
-		float: left;
 	}
 	#contact form{
 		margin-top: 0;
